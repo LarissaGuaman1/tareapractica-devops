@@ -39,7 +39,7 @@ jobs:
       run: docker build -t ghcr.io/larissaguaman1/tarea1-devops:1.0.0 .
 
     - name: Login en GitHub Container Registry
-      run: echo "${{ secrets.GHCR_TOKEN }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
+      run: echo "${{ secrets.DEVOPS }}" | docker login ghcr.io -u ${{ github.actor }} --password-stdin
 
     - name: Publicar la imagen
       run: docker push ghcr.io/larissaguaman1/tarea1-devops:1.0.0
